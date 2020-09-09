@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { Home } from "./routes";
+import { inject, observer } from "mobx-react";
+import { BrowserRouter,Route } from "react-router-dom";
 
-function App() {
+function App({ store }) {
+  const { fetchMembers } = store;
+  useEffect(fetchMembers, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Route exact path="/" component={Home} />
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default inject("store")(observer(App));

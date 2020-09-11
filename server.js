@@ -6,7 +6,7 @@ const data = require("./data");
 const cors = require("cors");
 const path = require("path");
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // configure body parser for AJAX requests
 app.use(cors());

@@ -1,10 +1,9 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
-import ModalDialogue from './Modal';
+import ModalDialogue from './ModalDialog';
 
 const Member = ({ id, name, tz, i, openModal, store }) => {
   const { isOpen } = store;
-  console.log(isOpen, 'isOpen');
   return (
     <li className="list-group-item ">
       <div className="row w-100">

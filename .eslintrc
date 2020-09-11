@@ -1,6 +1,6 @@
 {
   "extends": ["prettier", "prettier/react"],
-  "plugins": ["prettier", "react"],
+  "plugins": ["prettier"],
   "parser": "babel-eslint",
   "rules": {
     "react/jsx-filename-extension": [

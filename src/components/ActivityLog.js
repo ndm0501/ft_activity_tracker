@@ -1,6 +1,6 @@
 import React from "react"
 import Calendar from "react-calendar"
-import { Popover, OverlayTrigger} from "react-bootstrap"
+import {Popover, OverlayTrigger} from "react-bootstrap"
 import utils from "../utils/utils"
 import "react-calendar/dist/Calendar.css"
 import "./ActivityLog.css"

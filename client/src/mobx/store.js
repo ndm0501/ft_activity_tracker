@@ -12,7 +12,7 @@ class Store {
   }
 
   fetchMembers = () => {
-    fetch(`http://localhost:3000/data.json`)
+    fetch(`http://localhost:5000/`)
       .then((response) => response.json())
       .then((data) => {
         this.setMembers(data.members)

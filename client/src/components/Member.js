@@ -1,9 +1,9 @@
 import React from "react"
 import {inject, observer} from "mobx-react"
 import ModalDialogue from "./ModalDialog"
-import batman from "../assets/batman.png"
-import dave from "../assets/dave.png"
-import girl from "../assets/girl.png"
+import batman from "assets/batman.png"
+import dave from "assets/dave.png"
+import girl from "assets/girl.png"
 
 const imageGlossary = [batman, girl, dave]
 console.log(batman)

@@ -1,12 +1,8 @@
 import React from "react"
 import {inject, observer} from "mobx-react"
 import ModalDialogue from "./ModalDialog"
-import batman from "assets/batman.png"
-import dave from "assets/dave.png"
-import girl from "assets/girl.png"
 
-const imageGlossary = [batman, girl, dave]
-console.log(batman)
+const imageGlossary = ["batman", "girl", "dave"]
 
 const Member = ({id, name, tz, i, openModal, store}) => {
   const {isOpen} = store
@@ -15,7 +11,7 @@ const Member = ({id, name, tz, i, openModal, store}) => {
       <div className="row w-100">
         <div className="col-4 px-0">
           <img
-            src={imageGlossary[i]}
+            src={`https://ndm0501.s3.ap-south-1.amazonaws.com/${imageGlossary[i]}.png`}
             alt="Avatar"
             className="img-fluid rounded-circle d-block mx-auto"
           />

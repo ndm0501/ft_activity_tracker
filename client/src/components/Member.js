@@ -6,6 +6,7 @@ import dave from "../assets/dave.png"
 import girl from "../assets/girl.png"
 
 const imageGlossary = [batman, girl, dave]
+console.log(batman)
 
 const Member = ({id, name, tz, i, openModal, store}) => {
   const {isOpen} = store

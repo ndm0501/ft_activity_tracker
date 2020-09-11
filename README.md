@@ -39,7 +39,7 @@ This application uses images which are deployed in Amazon S3 Bucket.
 
 The application uses Mobx for state management.
 
-## File Structure
+# File Structure
 
 `client/src/assets` is the place having the avatar images.
 

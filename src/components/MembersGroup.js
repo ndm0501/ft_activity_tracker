@@ -1,12 +1,12 @@
-import React from 'react';
-import { Member } from '../components';
-import { inject, observer } from 'mobx-react';
+import React from "react"
+import {Member} from "../components"
+import {inject, observer} from "mobx-react"
 
-const MemberGroup = ({ store }) => {
-  const { members, setIsOpen } = store;
+const MemberGroup = ({store}) => {
+  const {members, setIsOpen} = store
   const openModal = (index) => {
     setIsOpen(index)
-  };
+  }
 
   return (
     <div className="container my-4">
@@ -39,6 +39,6 @@ const MemberGroup = ({ store }) => {
         </div>
       </div>
     </div>
-  );
-};
-export default inject('store')(observer(MemberGroup));
+  )
+}
+export default inject("store")(observer(MemberGroup))

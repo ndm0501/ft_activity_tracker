@@ -1,18 +1,17 @@
-import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
-import { inject, observer } from 'mobx-react';
-import ActivityLog from './ActivityLog';
+import React, {useState} from "react"
+import {Modal, Button} from "react-bootstrap"
+import {inject, observer} from "mobx-react"
+import ActivityLog from "./ActivityLog"
 
-const ModalDialogue = ({ store, id, isOpen, i }) => {
-  const { closeModal, members } = store;
-
-
+const ModalDialogue = ({store, id, isOpen, i}) => {
+  const {closeModal, members} = store
 
   return (
-    <Modal size="lg" show={isOpen} onHide={() => closeModal(i)}>
+    <Modal size="lg" show={isOpen} onHide={() => closeModal(i)} animation={false}>
       <Modal.Header closeButton>
         <Modal.Title>Activity Log</Modal.Title>
       </Modal.Header>
+
       <Modal.Body>
         <div className="container my-3">
           <div className="row my-2">
@@ -22,7 +21,7 @@ const ModalDialogue = ({ store, id, isOpen, i }) => {
             <div className="col-4">
               <h5>End Time</h5>
             </div>
-            <div className="col-4"></div>
+            <div className="col-2"></div>
           </div>
           <div className="row my-3">
             {members[i].activity_periods.map((period, i) => (
@@ -42,6 +41,6 @@ const ModalDialogue = ({ store, id, isOpen, i }) => {
         </Button>
       </Modal.Footer>
     </Modal>
-  );
-};
-export default inject('store')(observer(ModalDialogue));
+  )
+}
+export default inject("store")(observer(ModalDialogue))

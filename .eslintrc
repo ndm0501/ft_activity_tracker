@@ -1,13 +1,17 @@
 {
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
   "extends": ["prettier", "prettier/react"],
   "plugins": ["prettier"],
   "parser": "babel-eslint",
   "rules": {
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ]
+    "react/jsx-filename-extension": [0],
+    "no-console": "error"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
   }
 }
